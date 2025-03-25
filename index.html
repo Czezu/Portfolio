@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="yfyo.png" sizes="32x32" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Dominika Czezowska - Portfolio</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Główna strona */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    background-color: #ff84b7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #c1165c;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff84b7;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c1165c;
+}
+
+.hero {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    padding: 50px;
+    gap: 20px;
+}
+
+.content {
+    font-size: 18px;
+    max-width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1 span, .order-sections { 
+    color: #c1165c;
+}
+
+.job {
+    color: #c1165c;
+}
+
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ff84b7;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c1165c;
+}
+
+.downloadcv {
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #c1165c;
+    color: #c1165c;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.downloadcv:hover {
+    font-weight: bold;
+    background-color: #c1165c;
+    color: #ffffff;
+}
+
+.image img {
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid #c1165c;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
+    }
+
+    .downloadcv {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .image img {
+        width: 200px;
+    }
+}
+/* O mnie */
+.about {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 40%;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #c1165c;
+}
+
+.about p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 35%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 30px;
+    }
+
+    .about-content, .about-image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-content {
+        margin-bottom: 20px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .about-content {
+        padding: 10px;
+    }
+
+    .about-image img {
+        max-height: 250px;
+    }
+}
+
+/* Przycisk */
+.btn {
+    display: inline-block;
+    border: 2px solid #c1165c;
+    background-color: #c1165c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 2px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #c1165c;
+}
+
+.order-section {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Karuzela */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.carousel img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel img.main {
+    width: 300px;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Kropki */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4%;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #c1165c;
+    transform: scale(1.2); /* Animacja dla kropki */
+}
+
+/* Strzałki */
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #ff84b7;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel .arrow.left {
+    left: -10%;
+}
+
+.carousel .arrow.right {
+    right: -10%;
+}
+
+.carousel .arrow:hover {
+    background-color: #c1165c;
+    transform: scale(1.1); /* Animacja powiększenia strzałki */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        width: 100px;
+    }
+
+    .carousel img.main {
+        width: 200px;
+        transform: scale(1);
+    }
+
+    .dots {
+        gap: 5px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .carousel .arrow {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .carousel img {
+        width: 80px;
+    }
+
+    .carousel img.main {
+        width: 160px;
+    }
+
+    .carousel .arrow {
+        font-size: 20px;
+        padding: 6px;
+    }
+}
+/* Galeria */
+.gallery {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+/* Flexbox galerii */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Nagłówek główny galerii */
+.gallery h2 {
+    font-size: 32px;
+    color: #c1165c;
+    margin-bottom: 20px;
+}
+
+/* Nagłówki kategorii galerii */
+.gallery-category {
+    font-size: 24px;
+    color: #c1165c;
+    margin: 30px 0 15px;
+    border-bottom: 2px solid #c1165c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Flexbox dla całej galerii*/
+.projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Kategorie w sekcji */
+.category, .convention-gallery, .conference-gallery, .exhibition-gallery, .gamejam-gallery {
+    flex: 1 1 calc(33.33% - 20px); /* Szerokość każdej sekcji na 33.33% */
+    min-width: 300px;
+    margin-bottom: 20px;
+    color: #c1165c;
+}
+/* Flexbox dla obrazków w kategorii */
+.category-images, .convention-gallery, .conference-gallery, .exhibition-gallery, .gamejam-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Styl dla zdjęć */
+.category-images img, .convention-gallery img, .conference-gallery img, .exhibition-gallery img, .gamejam-gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    display: block;
+}
+
+/* Najechanie */
+.category-images img:hover, .convention-gallery img:hover, .conference-gallery img:hover, .exhibition-gallery img:hover, .gamejam-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .category, .convention-gallery, .conference-gallery, .exhibition-gallery, .gamejam-gallery {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .category, .convention-gallery, .conference-gallery, .exhibition-gallery, .gamejam-gallery {
+        flex: 1 1 100%;
+    }
+}
+
+/* Modal zdjęcie i video */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
+}
+
+.modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.modal video {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .modal .close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Software Skills */
+.software-skills {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.software-skills h2 {
+    font-size: 32px;
+    color: #c1165c;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Font Awesome Icons */
+.skills-container i {
+    font-size: 40px; 
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+}
+
+.skills-container i:hover,
+.custom-icon:hover {
+    color: #c1165c;
+    transform: scale(1.2);
+}
+
+/* Custom Icons for PS, Canva, and Lightroom */
+.custom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Photoshop */
+.photoshop-icon {
+    background-color: #001e36;
+}
+
+/* Canva */
+.canva-icon {
+    background-color: #00c4cc;
+}
+
+/* Lightroom */
+.lightroom-icon {
+    background-color: #2a2c2f;
+}
+
+.custom-icon:hover {
+    background-color: #c1165c;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 10px;
+    }
+
+    .skills-container i,
+    .custom-icon {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .software-skills h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .software-skills {
+        padding: 30px 0;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        gap: 8px;
+    }
+
+    .skills-container i,
+    .custom-icon {
+        font-size: 24px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .software-skills h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .software-skills {
+        padding: 20px 0;
+    }
+}
+
+/* Stopka */
+.footer {
+    color: white;
+    padding: 30px 20px;
+    text-align: left;
+}
+.footer-container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer img {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    right: -100px; 
+    top: 10%;
+    transform: translateY(-50%);
+}
+
+.footer p {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer i {
+    font-size: 18px;
+}
+    </style>
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="logo">C<span>zezu</span></div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#order">CONVENTIONS!</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="content">
+            <p>Hello, my name is</p>
+            <h1>Dominika <span>Czezowska</span></h1>
+            <p>I'm a <span class="job">Web Developer</span></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/dominika.czezowska/?locale=pl_PL" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561198417483569/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-steam"></i>
+                </a>
+                <a href="https://github.com/Czezu" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dominika-czezowska-865b732bb/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>                
+            </div>            
+            <a href="CV_Dominika_Czezowska (3).pdf" download="Dominika_Czezowska_CV.pdf" class="downloadcv">
+                DOWNLOAD CV
+            </a>
+        </div>
+        <div class="image">
+            <img src="FCJUGY.png" alt="Profile Picture">
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Dominika! I'm passionate about web development, UI/UX design, and creating beautiful websites. In my free time, I love drawing, watching anime, and gaming! 🎮✨<br>
+                I'm also a member of a scientific circle focused on game development and actively participate in various related conferences.<br><br>
+            </p>
+        <a href="#gallery" class="btn">See my works</a>
+        </div>
+        <div class="about-image">
+            <img src="received_920669823162721.jpeg" alt="Dominika's Image" />
+        </div>
+        <section id="software-skills" class="software-skills"> 
+            <h2>Software Skills</h2>
+            <div class="skills-container">
+                <span class="custom-icon photoshop-icon" title="Photoshop">PS</span>
+                <span class="custom-icon canva-icon" title="Canva">C</span>
+                <span class="custom-icon lightroom-icon" title="Lightroom">Lr</span>
+                <i class="fa-solid fa-paint-brush" title="GIMP"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+                <i class="fa-solid fa-code" title="C++"></i>
+                <i class="fa-brands fa-html5" title="HTML"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                <i class="fa-brands fa-php" title="PHP"></i>
+                <i class="fa-solid fa-database" title="SQL"></i>
+                <i class="fa-brands fa-laravel" title="jQuery"></i>
+                <i class="fa-solid fa-file" title="Office"></i>
+                <i class="fa-brands fa-xing" title="XANO"></i>
+                <i class="fa-solid fa-gimp" title="GIMP"></i>
+            </div>
+        <div id="imageModal" class="modal" onclick="closeImageModal()">
+            <img id="modal-img" src="" alt="Large Image" />
+        </div>
+        </section>
+    </section>
+    <section id="order" class="order">
+        <div class="order-section">
+            <h1>MY CONVENTIONS!<br><br></h1>
+            <div class="carousel">
+          <div class="arrow left" onclick="changeImage('left')">&#8678;</div>
+          <a id="leftLink" href="https://www.facebook.com/KNTGameDec/posts/384541201240573?ref=embed_post" target="_blank">
+              <img id="leftImage" src="3.png" alt="Side Image">
+          </a>
+          <a id="mainLink" href="https://www.facebook.com/KNTGameDec/posts/pfbid0PAc4Ytbg1AQyf5uGvm8acQsGUaznc4vRF5AmaFgXC3AqQNXxw6rmL5MmSJ4Qyc1Pl" target="_blank">
+              <img id="mainImage" class="main" src="fsegf.png" alt="Big Brew Long Black">
+          </a>
+          <a id="rightLink" href="https://www.facebook.com/KNTGameDec/posts/427138506980842?ref=embed_post" target="_blank">
+              <img id="rightImage" src="2.png" alt="Side Image">
+          </a>
+          <div class="arrow right" onclick="changeImage('right')">&#8680;</div>
+      </div>
+      <div class="dots">
+          <div class="dot active" onclick="changeImageByDot(0)"></div>
+          <div class="dot" onclick="changeImageByDot(1)"></div>
+          <div class="dot" onclick="changeImageByDot(2)"></div>
+      </div>
+  </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <h3 class="gallery-category">Pictures from Conventions</h3>
+    <div class="gallery-grid conventions-gallery">
+
+    <div class="category">
+        <h4 class="category-title">Conferences<br><br></h4>
+        <div class="category-images">
+            <img src="FB_IMG_1701717422414.jpg" alt="Conference 1" onclick="openImageModal(this)" />
+            <img src="FB_IMG_1701717446543.jpg" alt="Conference 2" onclick="openImageModal(this)" />
+            <img src="FB_IMG_1701717529661.jpg" alt="Conference 3" onclick="openImageModal(this)" />
+            <img src="IMG20231201093259.jpg" alt="Conference 4" onclick="openImageModal(this)" />
+            <img src="Messenger_creation_6fa92d2e-9f61-4439-bc64-0299b774edc9.jpeg" alt="Conference 5" onclick="openImageModal(this)" />
+            <img src="Messenger_creation_8d92cd33-12b5-4c42-b5a9-06e91ebec6fa.jpeg" alt="Conference 6" onclick="openImageModal(this)" />
+            <img src="Messenger_creation_501d300a-7a22-4ed5-ab3f-8d769add3610.jpeg" alt="Conference 7" onclick="openImageModal(this)" />
+        </div>
+    </div>
+
+    <div class="category">
+        <h4 class="category-title">Exhibitions and Lectures<br><br></h4>
+        <div class="category-images">
+            <img src="FB_IMG_1700828489782.jpg" alt="Exhibition 1" onclick="openImageModal(this)" />
+            <img src="FB_IMG_1714218180319.jpg" alt="Exhibition 2" onclick="openImageModal(this)" />
+            <img src="received_429245166466669.jpeg" alt="Exhibition 3" onclick="openImageModal(this)" />
+        </div>
+    </div>
+
+    <div class="category">
+        <h4 class="category-title">Game Jams<br><br></h4>
+        <div class="category-images">
+            <img src="20240625_132243.jpg" alt="Game Jam 1" onclick="openImageModal(this)" />
+        </div>
+    </div>
+</div>
+
+<h3 class="gallery-category">Works and Projects</h3>
+<div class="gallery-grid works-projects-gallery">
+
+    <div class="category">
+        <h4 class="category-title">Logos and other Projects<br><br></h4>
+        <div class="category-images">
+            <img src="MOVET.png" alt="MOVET" onclick="openImageModal(this)" />
+            <img src="TOM WILLIAMS (1).png" alt="TOM WILLIAMS" onclick="openImageModal(this)" />
+            <img src="2_1.jpg" alt="Ulotka" onclick="openImageModal(this)" />
+            <img src="IMG20240417160953.jpg" alt="Ulotka i ja" onclick="openImageModal(this)" />
+        </div>
+    </div>
+
+    <div class="category">
+        <h4 class="category-title">Pixel Art<br><br></h4>
+        <div class="category-images">
+            <img src="projekt-pixilart (3).png" alt="Pixel Art 1" onclick="openImageModal(this)" />
+            <img src="yfyo.png" alt="Pixel Art 2" onclick="openImageModal(this)" />
+            <img src="rahare.png" alt="Pixel Art 3" onclick="openImageModal(this)" />
+            <img src="animelaska.png" alt="Pixel Art 4" onclick="openImageModal(this)" />
+        </div>
+    </div>
+
+        <div class="category">
+            <h4 class="category-title">Doodles<br><br></h4>
+            <div class="category-images">
+                <img src="GFCHFG.png" alt="Doodles 1" onclick="openImageModal(this)" />
+                <img src="widok.png" alt="Doodles 2" onclick="openImageModal(this)" />
+                <img src="IMG20231124154020.jpg" alt="Doodles 3" onclick="openImageModal(this)" />
+                <img src="stjrs.png" alt="Doodles 4" onclick="openImageModal(this)" />
+                <img src="dfg.png" alt="Doodles 4" onclick="openImageModal(this)" />
+            </div>
+        </div>
+
+    <div class="category">
+        <h4 class="category-title">Games<br><br></h4>
+        <div class="category-images">
+            <img src="Projekt bez nazwy.gif" alt="Game 1" onclick="openImageModal(this)" />
+            <img src="Dash.gif" alt="Game 2" onclick="openImageModal(this)" />
+    <!-- Obrazek video-->
+    <img src="gra.png" alt="stronavideo" onclick="openVideoModal()" />
+</div>
+    </div>
+</div>
+    </section>
+
+<!-- Modal z obrazkiem -->
+<div id="imageModal" class="modal" onclick="closeImageModal()">
+    <img id="modal-img" src="" alt="Large Image" />
+</div>
+
+<!-- Modal z wideo -->
+<div id="videoModal" class="modal">
+  <span class="close" onclick="closeVideoModal()">&times;</span>
+  <video id="videoPlayer" width="100%" controls>
+    <source src="Dlaczegopowinniście dać nam szanse.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p><i class="fa-solid fa-location-dot"></i>  Bydgoszcz</p>
+            <p><i class="fa-solid fa-envelope"></i>  d.czezowska.4a.02@gmail.com</p>
+            <img src="slime.gif" alt="Game 1" onclick="openImageModal(this)" />
+         </div>
+    </footer>
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const jobTitle = document.querySelector(".job");
+    const jobTitles = ["Web Developer", " Back End Developer", "Freelancer"];
+    let index = 0;
+
+    function changeText() {
+        jobTitle.textContent = jobTitles[index];
+        index = (index + 1) % jobTitles.length;
+    }
+
+    setInterval(changeText, 3000);
+});
+const images = ["fsegf.png", "2.png", "3.png"];
+        const links = [
+            "https://www.facebook.com/KNTGameDec/posts/pfbid0PAc4Ytbg1AQyf5uGvm8acQsGUaznc4vRF5AmaFgXC3AqQNXxw6rmL5MmSJ4Qyc1Pl",
+            "https://www.facebook.com/KNTGameDec/posts/427138506980842?ref=embed_post",
+            "https://www.facebook.com/KNTGameDec/posts/384541201240573?ref=embed_post" 
+        ];
+        let currentIndex = 0;
+
+        function updateImages() {
+            // Płynna zmiana zdjęcia głównego
+            document.getElementById('mainImage').style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById('mainImage').src = images[currentIndex];
+                document.getElementById('mainImage').style.opacity = 1;
+
+                // Ustawianie linków na podstawie zdjęcia
+                document.getElementById('mainLink').href = links[currentIndex];
+                document.getElementById('leftLink').href = links[(currentIndex + images.length - 1) % images.length];
+                document.getElementById('rightLink').href = links[(currentIndex + 1) % images.length];
+            }, 300);
+
+            document.getElementById('leftImage').src = images[(currentIndex + images.length - 1) % images.length];
+            document.getElementById('rightImage').src = images[(currentIndex + 1) % images.length];
+
+            // Aktualizacja kropek
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function changeImage(direction) {
+            if (direction === 'left') {
+                currentIndex = (currentIndex + images.length - 1) % images.length;
+            } else if (direction === 'right') {
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            updateImages();
+        }
+
+// Otwarcie modalu z obrazkiem
+function openImageModal(imageElement) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modal-img');
+  modal.style.display = 'flex';
+  modalImg.src = imageElement.src; 
+}
+
+// Zamknięcie modalu z obrazkiem
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none'; 
+}
+
+
+  //Otwarcie modalu z wideo
+  function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    modal.style.display = 'block';
+  }
+
+  // Zamknięcie modalu z wideo
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    modal.style.display = 'none';
+  }
+    </script>
+</body>
+</html>
